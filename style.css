@@ -22,9 +22,9 @@ h1{
 h2{
 	font-family: 'Raleway';
 	font-weight: 600;
-	font-size: 28px;
+	font-size: 29px;
 	color: #fff;
-	margin-bottom: 40px;
+	margin-bottom: 31px;
 }
 h3{
 	font-family: 'Raleway';
@@ -55,13 +55,15 @@ p.text1{
 	font-weight: Medium;
 	font-size: 25px;
 	color: #fff;
+	letter-spacing: .25px;
 }
 p.text2{
 	font-family: 'Raleway';
 	font-weight: Regular;
 	font-size: 14px;
 	color: #fff;
-	line-height: 2;
+	line-height: 1.87;
+	letter-spacing: .2px;
 }
 p.text3{
 	font-family: 'Raleway';
@@ -75,8 +77,13 @@ p.text4{
 	font-size: 14px;
 	color: #fff;
 }
-p.text5{
-
+.element-animation{
+	position: relative;
+	opacity: 0;
+	transition: .5s;
+}
+.element-animation.element-show{
+	opacity: 1;
 }
 
 body{
@@ -89,72 +96,73 @@ header{
 	padding: 50px 0 213px 0;
 	position: relative;
 	overflow: hidden;
-	margin-bottom: 75px;
+	margin-bottom: 86px;
 }
 header img{
 	position: absolute;
+	transition: all 0.1s ease;
 }
 header img:nth-child(1){
-	top: -18%;
-	left: -8%;
+	top: -17.9%;
+	left: -8.4%;
 }
 header img:nth-child(2){
-	top: 13%;
-	left: 15%;
+	top: 13.8%;
+	left: 16.2%;
 }
 header img:nth-child(3){
-	top: 15%;
-	left: 30%;
-}
-header img:nth-child(4){
-	top: 17.2%;
+	top: 15.4%;
 	left: 31.6%;
 }
+header img:nth-child(4){
+	top: 17.8%;
+	left: 33.1%;
+}
 header img:nth-child(5){
-	top: 16%;
-	left: 3%;
+	top: 17.5%;
+	left: 2.7%;
 	z-index: 1;
 }
 header img:nth-child(6){
-	top: 39%;
-	left: 4%;
+	top: 40.2%;
+	left: 3.7%;
 }
 header img:nth-child(7){
-	top: 55%;
-	left: 4%;
+	top: 54.9%;
+	left: 3.9%;
 }
 header img:nth-child(8){
-	top: 65.6%;
-	left: 11.4%;
+	top: 65.5%;
+	left: 11.2%;
 }
 header img:nth-child(9){
-	bottom: 13%;
-	left: 2%;
+	bottom: 13.7%;
+	left: 2.15%;
 }
 header img:nth-child(10){
-	bottom: 0;
-	right: -11%;
+	bottom: 0.8%;
+	right: -11.7%;
 }
 header img:nth-child(11){
-	bottom: 45%;
-	right: -9%;
+	bottom: 45.2%;
+	right: -8.7%;
 }
 header img:nth-child(12){
 	transform: rotate(90deg);
-	bottom: 75%;
-	right: 3%;
+	bottom: 74.3%;
+	right: 2.5%;
 }
 header img:nth-child(13){
 	bottom: 87%;
-	right: 6.1%;
+	right: 6%;
 }
 header img:nth-child(14){
-	top: -3%;
-	right: -2%;
+	top: -3.9%;
+	right: -1.8%;
 }
 header img:nth-child(15){
-	top: 37.5%;
-	left: 42%;
+	top: 39.5%;
+	left: 41.5%;
 }
 header img:nth-child(16){
 	top: 67%;
@@ -164,14 +172,24 @@ header img:nth-child(17){
 	top: 70.5%;
 	left: 33.9%;
 }
+header img:nth-child(18){
+	top: 63.7%;
+	left: 40.55%;
+}
+header img:nth-child(19){
+	top: 56.3%;
+	left: 43%;
+}
 header nav{
 	display: flex;
 	justify-content: space-between;
-	font-size: 28px;
+	font-size: 29px;
 	margin-bottom: 370px;
 }
 header nav a{
 	text-decoration: none;
+	position: relative;
+	top: 0;
 }
 header nav p{
 	font-family: 'Raleway';
@@ -182,32 +200,75 @@ header nav p:hover{
 	color: #da43ff;
 }
 header nav .left a{
-	position:relative; 
-	top: 0;
-	left: -90px; 
+	top: -1px;
 }
 header nav .right{
 	display: flex;
 	align-items: center;
 }
 header nav .right a{
-	margin-left: 15px;
+	margin-left: 18px;
+	top: -1px;
 }
 header nav .right .lines{
 	cursor: pointer;
 	margin-left: 15px;
 }
 header nav .right .lines:hover .line{
+	transition: .1s;
 	background-color: #da43ff;
 }
 header nav .right .line{
-	width: 20px;
+	width: 17px;
 	height: 4px;
 	background-color: #fff;
 	margin-bottom: 5px;
 }
 header nav .right .line:last-child{
 	margin-bottom: 0;
+}
+header nav .left a.element-animation{
+	left: -200px;
+}
+header nav .left a.element-animation.element-show{
+	left: -80px;
+}
+header nav .right a.element-animation{
+	right: 142px;
+}
+header nav .right a.element-animation.element-show{
+	right: 2px;
+}
+header nav .right a:nth-child(3){
+	transition: .5s;
+}
+header nav .right a:nth-child(2){
+	transition: .6s;
+}
+header nav .right a:nth-child(1){
+	transition: .7s;
+}
+header nav .lines.element-animation{
+	transform: translate(-140px);
+	transition: .4s;
+}
+header nav .lines.element-animation.element-show{
+	transform: translate(0px);
+}
+header nav .line.element-animation{
+	transform: translate(-50px);
+}
+header nav .line.element-animation.element-show{
+	transform: translate(0px);
+}
+header nav .line:nth-child(1){
+	transition: .5s;
+}
+header nav .line:nth-child(2){
+	transition: .4s;
+}
+header nav .line:nth-child(3){
+	transition: .3s;
 }
 header .Summer{
 	display: flex;
@@ -219,7 +280,7 @@ header .Summer .left{
 }
 header .Summer .left .block{
 	position: absolute;
-	top: -70%;
+	top: -66%;
 	left: -10%;
 	text-align: center;
 	background: url(imgs/figures/Ellipse.png);
@@ -234,19 +295,41 @@ header .Summer .left .inBlock{
 }
 header .Summer .block h1.titleUp{
 	font-size: 58px;
+	transform: translate(-1px, 0px);
 }
 header .Summer .block h1.titleDown{
 	font-family: 'Monoton';
 	font-weight: 400;
-	font-size: 74px;
+	font-size: 70px;
 	line-height: 1.2;
+	transform: translate(-1px, -3px);
+}
+header .Summer .block h1:nth-child(1).element-animation.element-show{
+	animation: SummerBlockH1 1s;
+}
+@keyframes SummerBlockH1{
+	0%{
+		transform: translate(-100px);
+	}
+	50%{
+		transform: translate(50px);
+	}
+	100%{
+		transform: translate(0px);
+	}
+}
+header .Summer .block h1:nth-child(2).element-animation{
+	transform: translate(-150px);
+}
+header .Summer .block h1:nth-child(2).element-animation.element-show{
+	transform: translate(0px);
 }
 header .Summer .right{
 	width: 50%;
 	text-align: right;
 }
 header .Summer .right h1{
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
 header .Summer .right hr{
 	border: 0;
@@ -254,14 +337,14 @@ header .Summer .right hr{
 	width: 30%;
 	background-color: #fff;
 	margin-left: auto;
-	margin-bottom: 20px;
+	margin-bottom: 24px;
 }
 header .Summer .right p.text1{
 	margin-bottom: 50px;
 }
 header .Summer .right a{
 	display: inline-block;
-	padding: 6px 60px;
+	padding: 7px 63px;
 	background-color: #fff;
 	text-decoration: none;
 	border: 2.5px solid #fff;
@@ -269,10 +352,12 @@ header .Summer .right a{
 }
 header .Summer .right a p{
 	font-family: 'Raleway';
-	font-weight: Bold;
+	font-weight: 700;
 	font-size: 26px;
 	color: #100667;
 	transition: .5s;
+	transform: translate(-5px, 0px);
+	letter-spacing: -.5px;
 }
 header .Summer .right a:hover{
 	background-color: rgba(255, 255, 255, 0);
@@ -280,26 +365,68 @@ header .Summer .right a:hover{
 header .Summer .right a:hover p{
 	color: #fff;
 }
+header .Summer .right .element-animation{
+	position: relative;
+	top: 0;
+	right: -150px;
+}
+header .Summer .right .element-animation.element-show{
+	right: 0;
+}
+header .Summer .right .element-animation:nth-child(1){
+	transition: .5s;
+}
+header .Summer .right .element-animation:nth-child(2){
+	transition: .6s;
+}
+header .Summer .right .element-animation:nth-child(3){
+	transition: .7s;
+}
+header .Summer .right .element-animation:nth-child(4){
+	transition: .8s;
+}
 
 main{
 
 }
 main .Special{
 	text-align: center;
-	margin-bottom: 125px;
+	margin-bottom: 128px;
 }
 main .Special img{
 	width: 50px;
 	margin-bottom: 10px;
 }
+main .Special img.element-animation{
+	position: relative;
+	top: -150px;
+	left: 0;
+}
+main .Special img.element-animation.element-show{
+	top: 0;
+}
+main .Special h2.element-animation{
+	top: -40px;
+}
+main .Special h2.element-animation.element-show{
+	top: 0;
+}
 main .Special p.text2{
-	max-width: 66%;
+	max-width: 62%;
 	margin: 0 auto;
+}
+main .Special p.text2.element-animation{
+	position: relative;
+	top: -50px;
+	left: 0;
+}
+main .Special p.text2.element-animation.element-show{
+	top: 0;
 }
 main .New{
 	background-color: #aa15b6;
-	padding: 75px 0;
-	margin-bottom: 100px;
+	padding: 103px 0 96px 0;
+	margin-bottom: 89px;
 }
 main .New .blocks{
 	display: flex;
@@ -308,26 +435,69 @@ main .New .blocks{
 main .New .block{
 	width: 30%;
 }
+main .New .block:nth-child(1){
+	transform: translate(3px);
+}
+main .New .block:nth-child(2){
+	transform: translate(19px);
+}
+main .New .block:nth-child(3){
+	transform: translate(33px);
+}
 main .New img{
 	width: 60px;
-	margin-bottom: 15px;
+	margin-bottom: 23px;
 }
 main .New h3{
-	margin-bottom: 20px;
+	margin-bottom: 31px;
 }
 main .New p.text3{
 	line-height: 1.5;
+	letter-spacing: .3px;
+}
+main .New img.element-animation{
+	left: -100px;
+}
+main .New img.element-animation.element-show{
+	left: 0;
+}
+main .New h3.element-animation{
+	left: -80px;
+}
+main .New h3.element-animation.element-show{
+	left: 0;
+}
+main .New p.element-animation{
+	left: -60px;
+}
+main .New p.element-animation.element-show{
+	left: 0;
 }
 main .Priorities{
 	text-align: center;
-	margin-bottom: 125px;
+	margin-bottom: 115px;
+}
+main .Priorities h2{
+	margin-bottom: 40px;
 }
 main .Priorities p.text2{
 	max-width: 60%;
 	margin: 0 auto;
 }
+main .Priorities h2.element-animation{
+	top: -60px;
+}
+main .Priorities h2.element-animation.element-show{
+	top: 0;
+}
+main .Priorities p.element-animation{
+	top: -80px;
+}
+main .Priorities p.element-animation.element-show{
+	top: 0;
+}
 main .Company{
-	margin-bottom: 125px;
+	margin-bottom: 132px;
 }
 main .Company .blocks{
 	display: flex;
@@ -335,16 +505,36 @@ main .Company .blocks{
 }
 main .Company .block{
 	width: 31.5%;
-	padding: 50px;
+	padding: 58px 50px 55px 65px;
 	box-sizing: border-box;
 	background-color: #b016bd;
 }
+main .Company .block:nth-child(1).element-animation{
+	top: -160px;
+}
+main .Company .block:nth-child(2).element-animation{
+	top: -120px;
+}
+main .Company .block:nth-child(3).element-animation{
+	top: -80px;
+}
+main .Company .block.element-animation.element-show{
+	top: 0;
+}
 main .Company h4{
-	margin-bottom: 75px;
+	margin-bottom: 52px;
+}
+main .Company h4.element-animation,
+main .Company p.element-animation{
+	left: -100px;
+}
+main .Company h4.element-animation.element-show,
+main .Company p.element-animation.element-show{
+	left: 0;
 }
 main .Company p.text3{
 	font-size: 18px;
-	width: 80%;
+	width: 83%;
 	margin-bottom: 50px;
 }
 main .Company .block .block{
@@ -364,29 +554,39 @@ main .Company .block .block p.profile{
 	font-size: 14px;
 	color: #fff;
 }
+main .Company .block .block h4.element-animation{
+	left: -120px;
+}
+main .Company .block .block p.element-animation{
+	left: -80px;
+}
+main .Company .block .block h4.element-animation.element-show,
+main .Company .block .block p.element-animation.element-show{
+	left: 0;
+}
 main .Company img{
 	width: 60px;
-	 margin-right: 15px;
+	 margin-right: 24px;
 }
 main .What{
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 61px;
 }
 main .What img{
-	margin-bottom: 100px;
+	margin-bottom: 81px;
 }
 main .What h2{
 	margin-bottom: 25px;
 }
 main .What p.text2{
-	max-width: 55%;
+	max-width: 50%;
 	margin: 0 auto 50px auto;
 }
 main .What hr,
 main .David hr{
-	width: 10%;
-	height: 8px;
-	margin: 0 auto 35px auto;
+	width: 11.5%;
+	height: 10px;
+	margin: 0 auto 43px auto;
 	border: 0;
 	background-color: #fff;
 }
@@ -396,57 +596,78 @@ main .What .nav{
 }
 main .What .nav a{
 	text-decoration: none;
+	display: block;
+	position: relative;
 	margin: 0 20px;
+}
+main .What .nav a::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: white;
+	transform: scale(0);
+	transform-origin: center;
+	transition: opacity 300ms, transform 300ms;
+}
+main .What .nav a:hover::after,
+main .What .nav a:focus::after{
+	transform: scale(1);
 }
 main .What .nav p{
 	font-family: serif;
 	font-family: 'Raleway';
 	font-weight: Medium;
-	font-size: 14px;
+	font-size: 17px;
 	color: #fff;
 }
 main .David{
 	text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 121px;
 }
 main .David img{
-	margin-bottom: 75px;
+	margin-bottom: 71px;
 }
 main .David hr{
-	margin-bottom: 75px;
+	margin-bottom: 89px;
 }
 main .David h2{
 	font-size: 74px;
 	line-height: .5;
-	margin-bottom: 5px;
+	margin-bottom: 9px;
 }
 main .David p.text2{
-	width: 40%;
-	margin: 0 auto;
-	margin-bottom: 40px;
+	width: 48%;
+	margin: 0 auto 42px auto;
+	font-size: 18px;
 }
 main .David p.text2Under{
 	font-family: 'Raleway';
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 18px;
 	color: #fff;
 }
 main .Some{
-	margin-bottom: 125px;
+	margin-bottom: 104px;
+}
+main .Some img{
+	margin-bottom: -6px;
 }
 main .Some .photo{
 	background: url(imgs/photos/f5.png) no-repeat;
 	background-size: 100%;
-	padding: 200px 0 250px 0;
+	padding: 166px 0 296px 0;
 }
 main .Some h2{
 	text-align: center;
-	margin-bottom: 75px;
+	margin-bottom: 88px;
 }
 main .Some .blocks{
 	display: flex;
 	justify-content: space-between;
-	width: 45%;
+	width: 43.5%;
 	margin: 0 auto;
 }
 main .Some .block{
@@ -457,21 +678,24 @@ main .Some .block p{
 	font-weight: Regular;
 	font-size: 18px;
 	color: #fff;
-	margin-bottom: 25px;
+	margin-bottom: 14px;
 }
 main .Some .block p:nth-child(1){
 	font-size: 12px;
+	margin-bottom: 24px;
 }
 main .Some .block p:nth-child(3){
+	font-size: 21px;
+	white-space: nowrap;
 	margin-bottom: 0;
 }
 main .Something{
-	margin-bottom: 100px;
+	margin-bottom: 112px;
 }
 main .Something .block{
 	display: flex;
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 35px;
 }
 main .Something .block:last-child{
 	margin-bottom: 0;
@@ -485,18 +709,26 @@ main .Something h5:nth-child(1){
 }
 main .Something h5:nth-child(2){
 	font-size: 20px;
-	margin-bottom: 40px;
+	margin-bottom: 48px;
 }
 main .Something .block:nth-child(1) .left,
 main .Something .block:nth-child(2) .right,
 main .Something .block:nth-child(3) .left{
-	padding: 100px 100px;
+	padding: 90px 100px 100px 117px;
 	box-sizing: border-box;
+}
+main .Something .block:nth-child(2) .right{
+	transform: translate(50px);
 }
 main .Something .block:nth-child(1) img{
 	position: relative;
 	top: 0;
-	left: -50px;
+	left: -63px;
+}
+main .Something .block:nth-child(2) img{
+	position: relative;
+	top: 0;
+	left: -9px;
 }
 main .Something .block:nth-child(3) img{
 	position: relative;
@@ -505,8 +737,8 @@ main .Something .block:nth-child(3) img{
 }
 main .Month{
 	background-color: #8d1297;
-	padding: 75px 0;
-	margin-bottom: 50px;
+	padding: 75px 0 75px 0;
+	margin-bottom: 58px;
 }
 main .Month .blocks{
 	display: flex;
@@ -532,21 +764,23 @@ main .David2{
 	margin-bottom: 50px;
 }
 main .David2 h2{
-	font-size: 74px;
+	font-size: 92px;
 	line-height: .5;
-	margin-bottom: 5px;
+	margin-bottom: -10px;
 }
 main .David2 p.text2{
-	width: 40%;
+	width: 52%;
 	margin: 0 auto;
-	margin-bottom: 40px;
+	margin-bottom: 22px;
+	font-size: 18px;
+	letter-spacing: 1px;
 }
 main .David2 p.text2Under{
 	font-family: 'Raleway';
 	font-weight: 600;
 	font-size: 14px;
 	color: #fff;
-	margin-bottom: 50px;
+	margin-bottom: 42px;
 }
 main .David2 .imgs{
 	display: flex;
@@ -554,35 +788,55 @@ main .David2 .imgs{
 	width: 22.5%;
 	margin: 0 auto;
 	line-height: .5;
+	transform: translate(-12px);
+}
+main .David2 .imgs img{
+	transition: .1s;
+}
+main .David2 .imgs img:hover{
+	filter: invert(100%);
 }
 
 footer{
  	background-color: #aa15b6;
- 	padding: 75px 0;
+ 	padding: 62px 0;
 }
 footer .container{
 	display: flex;
 	justify-content: space-between;
 }
 footer .left{
-	width: 25%;
+	width: 35%;
 }
 footer .left h1,
 footer .right h1{
+	margin-bottom: 39px;
+}
+footer .left h1{
+	font-size: 26px;
+}
+footer .right h1{
 	font-size: 20px;
-	margin-bottom: 40px;
 }
 footer a{
 	text-decoration: none;
+}
+footer .right .block:nth-child(1) a:hover,
+footer .right .block:nth-child(2) a:hover{
+	text-decoration: underline solid #fff 2px;
+}
+footer .right .block:nth-child(3) a:hover{
+	text-decoration: underline solid #fff 1px;
 }
 footer .left p,
 footer .right p{
 	font-size: 16px;
 	margin-bottom: 0;
+	letter-spacing: 2px;
 }
 footer .right{
-	width: 75%;
-	padding: 0 50px 0 300px;
+	width: 65%;
+	padding: 0 50px 0 140px;
 	box-sizing: border-box;
 }
 footer .blocks{
@@ -592,5 +846,11 @@ footer .blocks{
 footer .block:nth-child(1) p,
 footer .block:nth-child(2) p{
 	font-weight: 600;
+}
+footer .block:nth-child(1){
+	transform: translate(34px);
+}
+footer .block:nth-child(3){
+	transform: translate(-42px);
 }
 
